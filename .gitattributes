@@ -1,0 +1,2 @@
+# Shell scripts must use LF so they run on Linux (e.g. deploy-pos-server.sh on VPS)
+*.sh text eol=lf

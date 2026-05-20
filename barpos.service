@@ -1,0 +1,22 @@
+[Unit]
+Description=Bar POS System
+After=network.target
+
+[Service]
+Type=simple
+User=nodejs
+WorkingDirectory=/var/www/bar
+Environment=NODE_ENV=production
+Environment=PORT=7100
+ExecStart=/var/www/bar/start.sh
+ExecStop=/bin/kill -SIGTERM $MAINPID
+ExecReload=/bin/kill -SIGHUP $MAINPID
+Restart=on-failure
+RestartSec=10s
+LimitNOFILE=65536
+LimitNPROC=65536
+NoNewPrivileges=true
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target

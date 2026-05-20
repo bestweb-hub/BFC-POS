@@ -1,0 +1,32 @@
+[Unit]
+Description=BFC POS System
+Documentation=https://github.com/yourusername/localpos
+After=network.target
+
+[Service]
+Type=simple
+User=nodejs
+WorkingDirectory=/var/www/bfcpos
+Environment=NODE_ENV=production
+Environment=PORT=7050
+
+# Direct node execution - uses wrapper script that loads .env.production
+ExecStart=/var/www/bfcpos/start.sh
+ExecStop=/bin/kill -SIGTERM $MAINPID
+ExecReload=/bin/kill -SIGHUP $MAINPID
+
+# Restart policy
+Restart=on-failure
+RestartSec=10s
+
+# Resource limits
+LimitNOFILE=65536
+LimitNPROC=65536
+
+# Security
+NoNewPrivileges=true
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target
+
