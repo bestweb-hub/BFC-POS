@@ -4,7 +4,7 @@
   "type": "module",
   "license": "MIT",
   "scripts": {
-    "dev": "cross-env NODE_ENV=development tsx server/index.ts",
+    "dev": "NODE_ENV=development tsx server/index.ts",
     "build:vite": "vite build",
     "build:server": "esbuild server/index.ts --platform=node --packages=external --external:vite --external:@vitejs/plugin-react --external:../vite.config --bundle --format=esm --outdir=dist",
     "build": "npm run build:vite && npm run build:server",

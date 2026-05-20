@@ -1,0 +1,65 @@
+Here's an outline of your advanced POS workflow, capturing the drafting, editing, printing, and completing orders with the associated functionalities:
+
+POS Workflow & Features
+1. Items in Cart & Draft Saving
+When users select items, they are added to the Items Cart.
+Clicking "Draft" saves current cart items into a Draft List.
+The draft order is stored temporarily and appears in the Draft List view.
+2. Draft List View
+Displays all saved drafts with:
+Order ID / Name
+Date & Time
+Total Items & Amount
+Action Buttons per Draft:
+Edit Order: Restores all draft items back into the cart, allowing modifications.
+Print Order: Opens invoice print view for the draft.
+Delete Order: Removes the draft from the list.
+3. "Edit Order" Functionality
+When clicked:
+All draft items are moved back into the cart.
+User can add more items or modify existing items.
+Draft is cleared from draft list once reopened or saved as new.
+4. "Receipt Print"
+When clicked:
+Shows invoice preview/dialog.
+Has a Print option to generate a physical copy.
+Can include all order details, items, prices, taxes, etc.
+5. "Complete Order"
+When clicked:
+Opens the Payment Methods modal:
+ABA, Acleda, Cash, Due, Card Payment (and possibly more)
+User selects the desired payment mode.
+After payment (or if marked pay later), generates invoice print.
+Order is finalized:
+Moves to Sales List for record.
+Order remains in sales for reports, but no further modifications are allowed without admin rights.
+6. Order Completion & Sales List
+Regardless of invoice print, order confirms:
+Saved into the Sales List.
+Visible in Sales Reports.
+Orders marked as completed are locked from editing unless required by admin.
+Visual & Functional Summary
+Dispatch buttons in order panel:
+"Receipt Print" (orange): Print invoice.
+"Draft": Save current cart as draft.
+"Complete Order": Proceed to payment and finalize.
+Draft List Management:
+View, Edit, Delete.
+On Edit, restore items to cart.
+Invoice Print:
+Launches invoice view with print option.
+Order Finalize:
+Moves to sales records.
+No matter invoice print success, order is recorded.
+Implementation Tips
+Maintain a draft orders array in local storage or backend.
+Clicking Draft saves current cart references.
+Editing restores draft items.
+Payment method modal triggers on "Complete Order."
+Finalized order gets added to the sales database/list.
+Would you like me to help with sample code snippets for:
+
+Saving draft orders,
+Restoring draft order to cart,
+Finalizing and printing invoice,
+Moving order to sales data?
