@@ -119,7 +119,7 @@ export default function SubscriptionCardsPage() {
   }
 
   return (
-    <div className="p-4 md:p-6 space-y-6 max-w-6xl mx-auto">
+    <div className="h-full overflow-auto p-4 md:p-6 space-y-6 max-w-6xl mx-auto">
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
         <div>
           <h1 className="text-2xl font-semibold tracking-tight">Subscription cards</h1>

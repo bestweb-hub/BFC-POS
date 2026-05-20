@@ -1373,7 +1373,7 @@ export default function Inventory() {
   const historyTotalPages = Math.ceil(adjustmentsTotal / historyPageSize);
 
   return (
-    <div className="p-4 md:p-6 space-y-4 md:space-y-6 pb-8">
+    <div className="h-full overflow-auto p-4 md:p-6 space-y-4 md:space-y-6 pb-8">
       <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
         <div>
           <h1 className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent" data-testid="text-inventory-title">
